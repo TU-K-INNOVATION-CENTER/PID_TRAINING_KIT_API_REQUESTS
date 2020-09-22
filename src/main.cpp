@@ -4,8 +4,8 @@
 #include <ESP8266HTTPClient.h>
 #include <WiFiClient.h>
 
-const char* ssid = "REPLACE_WITH_YOUR_SSID";
-const char* password = "REPLACE_WITH_YOUR_PASSWORD";
+const char* ssid = "*******";
+const char* password = "********";
 
 //Your Domain name with URL path or IP address with path
 const char* serverName = "http://pid-api.herokuapp.com/post/data";
@@ -41,7 +41,7 @@ void loop() {
 
       // Specify content-type header
       http.addHeader("Content-Type", "application/json");
-      int httpResponseCode = http.POST("{\"api_key\":\"tPmAT5Ab3j7F9\",\"sensor\":\"BME280\",\"value1\":\"24.25\",\"value2\":\"49.54\",\"value3\":\"1005.14\"}");
+      int httpResponseCode = http.POST("{\"controlValue\":23,\"error\":2,\"actualValue\":24.25,\"parameter\":1,\"time\":1005}");
      
       Serial.print("HTTP Response code: ");
       Serial.println(httpResponseCode);
