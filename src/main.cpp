@@ -10,10 +10,6 @@ const char* password = "********";
 //Your Domain name with URL path or IP address with path
 const char* serverName = "http://pid-api.herokuapp.com/post/data";
 
-
-
-
-
 void setup() {
 
    Serial.begin(115200);
